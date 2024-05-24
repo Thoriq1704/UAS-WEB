@@ -1,0 +1,490 @@
+@font-face {
+    font-family: 'sansation light';
+    src: url(assets/font/sansation/Sansation_Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  /* gunakan code di bawah untuk sticky header */
+  
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    background: #000000;
+    border-bottom: 2px solid white;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+  }
+
+ 
+  .logo-container img{
+    max-height: 50px;
+
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style-type: none;
+  }
+  .menu-list {
+    padding: 16px 32px;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+  } 
+
+  .menu-list::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #E41010;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+
+  .menu-list:hover::after{
+    width: 100%;
+}
+  
+  .hero,.third-section {
+    min-height: 100vh;
+  }
+
+  .second-section{
+    min-height: 50vh;
+  }
+  
+  .third-section{
+    min-height: 70vh;
+  }
+
+  .fourth-section{
+    min-height: 50vh;
+  }
+
+  .fifth-section{
+    min-height: 50vh;
+  }
+
+  .sixth-section{
+    min-height: 30vh;
+  }
+
+  .hero{
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(assets/image/vape-store-interior-design-google-80bdcb4df45abbc859bcae00732-vapor-business-plan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teks-box{
+    width: 90%;
+    color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 60px;
+    font-family: sansation light;
+    font-variant: light;
+    font-size: 66px;
+  }
+
+  .teks-box img{
+    width: 12%;
+    margin-top: 70px;
+  }
+
+
+  .aboutus img{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+  .second-section{
+    background-color: black;
+    border-top: 2px solid white;
+    color: #ffff;
+    text-align: center;
+    padding: 150px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.second-section h2{
+    font-family: sansation light;
+    font-size: 32px;
+}
+
+.second-section p{
+    font-family: montserrat;
+    font-size: 16px;
+    padding: 80px;
+    
+}
+
+.third-section{
+    background-image: linear-gradient(to bottom, rgb(36, 71, 255,0.2),rgb(2, 19, 40,0.2));
+    background-color: #000000;
+    border-top: 2px solid white;
+    color: #ffff;
+    text-align: center;
+    padding: 150px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.third-section h2{
+    font-family: sansation light;
+    font-size: 32px;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(4,
+  1fr);
+  margin-top: 70px;
+}
+.card{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0, 0.3);
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+  background-color: transparent;
+transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
+}
+
+.card:hover{
+  transform: translate3d(0px, 0px, -250px);
+}
+
+.card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner{
+  transform: rotateY(180deg);
+}
+
+.card-front img{
+  width: 270px;
+  margin-bottom: 120px;
+}
+
+.card-back img{
+  width: 220px;
+}
+
+.card-back h3{
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.card-front{
+  background: linear-gradient(to bottom, #008cff, #0f0142);
+}
+
+.card-back{
+  background: linear-gradient(to bottom, #008cff, #0f0142);
+  color: #ffff;
+  box-shadow: 0 5px 20px #ffffff;
+  transform: rotateY(180deg);
+}
+
+/*
+child 2*/
+
+.card-front2 img{
+  width: 270px;
+  margin-bottom: 120px;
+}
+
+.card-back2 img{
+  width: 220px;
+}
+
+.card-back2 h3{
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.card-front2, .card-back2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.card-front2{
+  background: linear-gradient(to bottom, #fd4ca5,#30025e);
+}
+
+.card-back2{
+  background: linear-gradient(to bottom, #fd4ca5, #30025e);
+  color: #ffff;
+  box-shadow: 0 5px 20px #a8bfff;
+  transform: rotateY(180deg);
+}
+
+/*
+child 3*/
+
+.card-front3 img{
+  width: 400px;
+  margin-bottom: 120px;
+  margin-left: 30px;
+}
+
+.card-back3 img{
+  width: 380px;
+  margin-left: 40px;
+}
+
+.card-back3 h3{
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.card-front3, .card-back3{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.card-front3{
+  background: linear-gradient(to bottom, #008cff, #0f0142);
+}
+
+.card-back3{
+  background: linear-gradient(to bottom, #008cff, #0f0142);
+  color: #ffff;
+  box-shadow: 0 5px 20px #a8bfff;
+  transform: rotateY(180deg);
+}
+
+/*
+child 4*/
+
+.card-front4 img{
+  width: 290px;
+  margin-bottom: 120px;
+}
+
+.card-back4 img{
+  width: 250px;
+}
+
+.card-back4 h3{
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.card-front4, .card-back4{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.card-front4{
+  background: linear-gradient(to bottom, #fd4ca5,#30025e);
+}
+
+.card-back4{
+  background: linear-gradient(to bottom, #fd4ca5,#30025e);
+  color: #ffff;
+  box-shadow: 0 5px 20px #a8bfff;
+  transform: rotateY(180deg);
+}
+
+.ourhistory img{
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.fourth-section{
+  background-color: black;
+  border-top: 2px solid white;
+  color: #ffff;
+  text-align: center;
+  padding: 150px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth-section h2{
+  font-family: sansation light;
+  font-size: 32px;
+}
+
+.fourth-section p{
+  font-family: montserrat;
+  font-size: 16px;
+  padding: 80px;
+}
+
+.fifth-section{
+  background-color: black;
+  border-top: 2px solid white;
+  color: #ffff;
+  text-align: center;
+  padding: 80px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fifth-section p{
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.fifth-section h3{
+  font-family: sansation light;
+}
+
+.visi, .misi{
+  padding: 80px;
+}
+
+.sixth-section{
+  background-image: linear-gradient(to bottom, rgb(36, 71, 255,0.2),rgb(2, 19, 40,0.2));
+  background-color: #000000;
+  border-top: 2px solid white;
+  color: #ffff;
+  padding: 150px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fcontainer{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content{
+  width: 33.3%;
+}
+
+h3{
+  font-family: sansation light;
+  font-size: 28; 
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-content p{
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+  font-family: Montserrat;
+  font-size: 14px;
+}
+
+.footer-content ul{
+  text-align: center;
+}
+
+.list{
+  padding: 0;
+}
+
+.list li{
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+  font-family: Montserrat;
+  font-size: 14px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.footer-sosmed img{
+  width: 15px;
+  height: 15px;
+}
+
+.icon-sosmed{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list li a{
+  color: #ffff;
+}
